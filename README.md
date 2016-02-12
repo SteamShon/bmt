@@ -1,10 +1,6 @@
 # Benchmark
 Benchmark script for Titan and S2Graph
 
-## Test Environment
-To be fair, we use same HBase cluster(5 region server) both for S2Graph and Titan. 
-For Rest server, we will run one server for each.
-
 ## Test Data
 To make fair comparison between two solution, we will use following synthetic matrix data.
 
@@ -42,8 +38,11 @@ for row in range(ROWS):
  	5. read vs write : 60 vs 40
 
 
+## Test Environment
+To be fair, we use same HBase cluster(5 region server) both for S2Graph and Titan. 
+For Rest server, single instance of s2rest_play(s2graph) and rexster-server-2.6.0(titan-0.5.4) is used.
 
-### Test Result
+### Read Test Result
 all single machine.
 
 | Solution | Set Name | # of rows | # of cols | query | mean response time | query per second |
