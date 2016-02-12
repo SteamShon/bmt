@@ -1,0 +1,19 @@
+curl -XPOST localhost:9000/graphs/createService -H 'Content-Type: Application/json' -d '
+{"serviceName": "s2graph-test"}
+'
+curl -XPOST localhost:9000/graphs/createLabel -H 'Content-Type: Application/json' -d '
+{
+    "label": "s2graph-friends",
+    "srcServiceName": "s2graph-test",
+    "srcColumnName": "user_id",
+    "srcColumnType": "string",
+    "tgtServiceName": "s2graph-test",
+    "tgtColumnName": "user_id",
+    "tgtColumnType": "string",
+    "indices": [],
+    "props": [],
+    "consistencyLevel": "weak",
+    "schemaVersion": "v3",
+    "serviceName": "s2graph-test"
+}
+'
