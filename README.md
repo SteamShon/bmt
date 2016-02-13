@@ -4,10 +4,13 @@ Benchmark script for Titan and S2Graph
 ## Test Data
 To make fair comparison between two solution, we will use following synthetic matrix data.
 
+| Set Name  | number of rows | number of cols |
+| ------------- | ------------- | ------------- |
+| s1  | 1000000  | 10 |
+| s2  | 1000000  | 20 |
+| s3  | 1000000  | 40 |
+| s4  | 10000000  | 10 |
 
-| Set Name | # of rows | # of cols |
-| -- | -- | -- |
-| **S3** | 10000000 | 10 | 
 
 
 column will be chose from randint(1 ~ row size)  
@@ -42,18 +45,18 @@ for row in range(ROWS):
 To be fair, we use same HBase cluster(5 region server) both for S2Graph and Titan. 
 For Rest server, single instance of s2rest_play(s2graph) and rexster-server-2.6.0(titan-0.5.4) is used.
 
-### Read Test Result
-all single machine.
+## Read Test Result
+all single rest server instance.
 
-| Solution | Set Name | # of rows | # of cols | query | mean response time | query per second |
-| -- | -- | -- | -- | -- | -- | -- |
-| Titan | **S3** | 10000000 | 10 | friends(10) of friends(10) | 61.48ms | 246.5 |
+### Titan(one server, 2 rexster instance)
+| query | mean response time | query per second |
+| ------------- | ------------- | ------------- |
+| friends(10) | 
+| friends(10) -> friends(10) | 93.13ms | 215 |
+
 
 
 ### S2Graph
-
-### Titan
-![screen shot 2016-02-12 at 3 35 40 pm](https://cloud.githubusercontent.com/assets/1264825/13000624/a4ea2bc4-d19f-11e5-9767-bdbfc762d9a1.png)
 
 
 
