@@ -48,16 +48,25 @@ For Rest server, single instance of s2rest_play(s2graph) and rexster-server-2.6.
 ## Read Test Result
 all single rest server instance.
 
-### Titan(one server, 2 rexster instance)
+### Titan(one server, 2 rexster instance, vuser 20)
+
 | query | mean response time | query per second |
 | ------------- | ------------- | ------------- |
 | friends(10) | 
 | friends(10) -> friends(10) | 93.13ms | 215 |
+| friends(20) -> friends(10) | ms |  |
+| friends(40) -> friends(10) | ms |  |
 
 
 
-### S2Graph
+### S2Graph(one server, 1 rest instance, vuser 20)
 
+| query | mean response time | query per second |
+| ------------- | ------------- | ------------- |
+| friends(10) | 
+| friends(10) -> friends(10) | 9.7ms | 969 |
+| friends(20) -> friends(10) | ms |  |
+| friends(40) -> friends(10) | ms |  |
 
 
 
