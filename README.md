@@ -63,7 +63,7 @@ all single rest server instance.
 
 | query | mean response time(ms) | query per second |
 | ------------- | ------------- | ------------- |
-| friends(10) | 
+| friends(10) | 4.5 | 4,352.6 |
 | friends(10) -> friends(10) | 14.1 | 1,407.6 |
 | friends(20) -> friends(10) | 22.1 | 898.1 |
 | friends(40) -> friends(10) | 39.6 | 501 |
