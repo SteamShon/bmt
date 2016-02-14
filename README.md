@@ -50,7 +50,7 @@ all single rest server instance.
 
 ### Titan(one server, 2 rexster instance, vuser 20)
 
-| query | mean response time | query per second |
+| query | mean response time(ms) | query per second |
 | ------------- | ------------- | ------------- |
 | friends(10) | 
 | friends(10) -> friends(10) | 93.13ms | 215 |
@@ -61,12 +61,12 @@ all single rest server instance.
 
 ### S2Graph(one server, 1 rest instance, vuser 20)
 
-| query | mean response time | query per second |
+| query | mean response time(ms) | query per second |
 | ------------- | ------------- | ------------- |
 | friends(10) | 
-| friends(10) -> friends(10) | 9.7ms | 969 |
-| friends(20) -> friends(10) | ms |  |
-| friends(40) -> friends(10) | ms |  |
+| friends(10) -> friends(10) | 14.1 | 1,407.6 |
+| friends(20) -> friends(10) | 22.1 | 898.1 |
+| friends(40) -> friends(10) | 39.6 | 501 |
 
 
 
